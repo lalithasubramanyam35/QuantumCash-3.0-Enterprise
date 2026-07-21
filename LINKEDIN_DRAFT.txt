@@ -1,9 +1,9 @@
-🚀 Thrilled to announce the launch of QuantumCash 3.0 (ICICI Enterprise Edition)! 🚀
+🚀 Thrilled to announce the launch of QuantumCash 3.0 (Enterprise Edition)! 🚀
 
 We have successfully migrated and re-architected QuantumCash 3 into a modern, enterprise-grade corporate banking dashboard, wrapping complex predictive cash-flow forecasting in a highly polished, professional UI.
 
 Key Highlights of this release:
-✨ ICICI-Inspired Corporate Aesthetic: Slick, crisp layouts using Corporate Blue, Clean White, and Light Ice-Blue colors built on Tailwind CSS.
+✨ Bank-Inspired Corporate Aesthetic: Slick, crisp layouts using Corporate Blue, Clean White, and Light Ice-Blue colors built on Tailwind CSS.
 🔒 Global Eye Toggle Privacy: Secure balance masking (₹••••••) across all dashboards with a single click.
 📊 7-Day Predictive Cash Flow: Ported math forecasting engine calculating runways and flagging liquidity shortfalls in real time.
 📝 Dynamic Underwriting Proposals: Auto-drafting short-term working capital request letters or scaling scaling reports instantly based on transaction ledger status.

@@ -1,6 +1,6 @@
-# QuantumCash 3.0 (ICICI Enterprise Edition)
+# QuantumCash 3.0 ( Enterprise Edition)
 
-A brand-new, enterprise-grade corporate banking dashboard and predictive treasury simulator inspired by the ICICI Bank design ecosystem. 
+A brand-new, enterprise-grade corporate banking dashboard and predictive treasury simulator inspired by the Bank design ecosystem. 
 
 QuantumCash 3.0 is a 100% self-contained React + TypeScript + Tailwind CSS Single-Page Application (SPA) built for zero-dependency client-side operations, featuring offline forecasting simulation and local state persistence.
 
@@ -8,7 +8,7 @@ QuantumCash 3.0 is a 100% self-contained React + TypeScript + Tailwind CSS Singl
 
 ## 🚀 Key Features
 
-1. **ICICI Bank Design Language:** Implements corporate blue and white color schemes (`#003366`, `#0f4c81`), crisp interfaces, and premium micro-interactions.
+1. **Bank Design Language:** Implements corporate blue and white color schemes (`#003366`, `#0f4c81`), crisp interfaces, and premium micro-interactions.
 2. **Strict Masked Data Privacy:** The global Eye Toggle hides all balances, deposits, investments, and loan figures behind `₹••••••` instantly.
 3. **7-Day Predictive Cash Flow:** Analyzes ledger transaction histories dynamically, visualizes operational runways, and forecasts cash crunches.
 4. **Dynamic Underwriting Letters:** Automatically drafts customized working capital micro-loan requests (for crunches) or expansion proposals (for stable accounts).

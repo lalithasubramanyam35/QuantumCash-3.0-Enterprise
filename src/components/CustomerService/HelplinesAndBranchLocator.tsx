@@ -16,7 +16,7 @@ export const HelplinesAndBranchLocator: React.FC = () => {
       city: 'Hyderabad',
       ifsc: 'QCUB0000108',
       workingHours: '9:30 AM - 4:30 PM (Mon-Sat, 2nd/4th Sat Off)',
-      phone: '+91 6303490644'
+      phone: '+91 0123456789'
     },
     {
       id: 'br-2',
@@ -87,7 +87,7 @@ export const HelplinesAndBranchLocator: React.FC = () => {
           </div>
           <div>
             <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider block">NRI Global Desk</span>
-            <p className="text-sm font-extrabold text-slate-800">+91 6303490644</p>
+            <p className="text-sm font-extrabold text-slate-800">+91 0123456789</p>
             <span className="text-[9px] text-slate-400">International Priority Line</span>
           </div>
         </div>

@@ -8,7 +8,7 @@ export const Login: React.FC = () => {
   // Login flow states
   const [isRegisterMode, setIsRegisterMode] = useState(false);
   const [email, setEmail] = useState('treasury@quantumcash.com');
-  const [phone, setPhone] = useState('+91 6303490644');
+  const [phone, setPhone] = useState('+91 0123456789');
   const [name, setName] = useState('Gandikota Lalitha Subramanyam');
   
   // Captcha states
@@ -343,7 +343,7 @@ export const Login: React.FC = () => {
                       type="tel"
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
-                      placeholder="+91 6303490644"
+                      placeholder="+91 0123456789"
                       className="w-full bg-slate-50 border border-slate-200 text-slate-800 text-xs rounded-lg pl-10 pr-4 py-3 focus:outline-none focus:border-icici-blue-light focus:bg-white transition"
                       required
                     />

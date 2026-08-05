@@ -123,7 +123,7 @@ export const Dashboard: React.FC = () => {
             {/* Call Us */}
             <div className="hidden sm:flex items-center gap-1.5 bg-white/10 px-3.5 py-2 rounded-full border border-white/15">
               <Phone className="w-3.5 h-3.5 text-icici-orange" />
-              <span>Call Us +91 6303490644</span>
+              <span>Call Us +91 0123456789</span>
             </div>
 
             {/* View Demo / Reset Demo Options */}

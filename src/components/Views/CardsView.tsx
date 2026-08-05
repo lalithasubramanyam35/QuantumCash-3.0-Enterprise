@@ -155,7 +155,7 @@ export const CardsView: React.FC = () => {
                     CVV: {eyeHidden ? '•••' : currentCard.cvv}
                   </div>
                   <div className="text-[9px] text-white/70 text-center font-mono">
-                    Issued by QuantumCash ICICI Enterprise • 24x7 Helpline +91 6303490644
+                    Issued by QuantumCash ICICI Enterprise • 24x7 Helpline +91 0123456789
                   </div>
                 </div>
               )}

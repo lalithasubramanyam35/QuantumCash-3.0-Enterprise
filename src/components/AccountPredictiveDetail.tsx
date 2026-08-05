@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useApp } from '../context/AppContext';
-import { formatCurrency } from '../utils';
+import { formatCurrency, cn } from '../utils';
 import { 
   Plus, 
   FileText, 
@@ -369,11 +369,28 @@ export const AccountPredictiveDetail: React.FC = () => {
                     const isEndNeg = row.end < 0;
                     const isStartNeg = row.start < 0;
                     return (
-                      <tr key={row.day} className="hover:bg-slate-50/50 transition">
+                      <tr 
+                        key={row.day} 
+                        className={cn(
+                          "transition",
+                          isEndNeg 
+                            ? "bg-rose-50/30 hover:bg-rose-50/50 border-l-4 border-rose-500" 
+                            : "hover:bg-slate-50/50"
+                        )}
+                      >
                         <td className="py-3 px-2 font-bold text-slate-900">{row.day}</td>
                         <td className="py-3 px-2 text-slate-400">{row.date}</td>
-                        <td className={`py-3 px-2 ${isStartNeg ? 'text-rose-500 font-bold' : ''}`}>
-                          {formatCurrency(row.start, eyeHidden)}
+                        <td className="py-3 px-2">
+                          {isStartNeg ? (
+                            <div className="flex flex-col">
+                              <span className="text-slate-500 font-semibold">₹0.00</span>
+                              <span className="text-[10px] text-red-500 font-bold">
+                                Deficit: {formatCurrency(row.start, eyeHidden)}
+                              </span>
+                            </div>
+                          ) : (
+                            formatCurrency(row.start, eyeHidden)
+                          )}
                         </td>
                         <td className="py-3 px-2 text-emerald-600 font-bold">
                           +{formatCurrency(row.in, eyeHidden)}
@@ -381,8 +398,23 @@ export const AccountPredictiveDetail: React.FC = () => {
                         <td className="py-3 px-2 text-rose-600">
                           -{formatCurrency(row.out, eyeHidden)}
                         </td>
-                        <td className={`py-3 px-2 font-bold ${isEndNeg ? 'text-red-500' : 'text-slate-800'}`}>
-                          {formatCurrency(row.end, eyeHidden)}
+                        <td className="py-3 px-2 font-bold">
+                          {isEndNeg ? (
+                            <div className="flex flex-col py-1">
+                              <span className="text-slate-800 font-bold">₹0.00</span>
+                              <span className="text-[10px] text-red-600 font-bold">
+                                Deficit: {formatCurrency(row.end, eyeHidden)}
+                              </span>
+                              <button 
+                                onClick={() => setShowLetterModal(true)}
+                                className="mt-1 text-[9px] font-black uppercase text-rose-700 bg-rose-50 hover:bg-rose-100 hover:text-rose-800 px-2 py-0.5 rounded border border-rose-200/50 self-start transition shadow-2xs"
+                              >
+                                Apply for Loan
+                              </button>
+                            </div>
+                          ) : (
+                            <span className="text-slate-800 font-bold">{formatCurrency(row.end, eyeHidden)}</span>
+                          )}
                         </td>
                         <td className="py-3 px-2">
                           {row.events !== 'None' ? (

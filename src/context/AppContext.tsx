@@ -990,8 +990,12 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
   // Calculate current balances
   const getAccountBalances = () => {
-    const stableBal = stableTxns.reduce((sum, t) => sum + t.amount, 0);
-    const crunchBal = crunchTxns.reduce((sum, t) => sum + t.amount, 0);
+    const stableBal = stableTxns.reduce((sum, t) => {
+      return t.type === 'OUTFLOW' ? sum - t.amount : sum + t.amount;
+    }, 0);
+    const crunchBal = crunchTxns.reduce((sum, t) => {
+      return t.type === 'OUTFLOW' ? sum - t.amount : sum + t.amount;
+    }, 0);
     return {
       stable: parseFloat(stableBal.toFixed(2)),
       crunch: parseFloat(crunchBal.toFixed(2)),
@@ -1098,7 +1102,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       date: '2026-07-20',
       transaction_id: utr,
       type,
-      amount: type === 'INFLOW' ? amount : -amount,
+      amount: amount,
       category,
       description: description || 'User added transaction'
     };
